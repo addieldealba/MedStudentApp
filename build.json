@@ -1,0 +1,21 @@
+{
+    "ios": {
+        "debug": {
+            "codeSignIdentity": "iPhone Developer",
+            "developmentTeam": "8D59Q93J37",
+            "packageType": "development",
+            "buildFlag": [
+                "-UseModernBuildSystem=0"
+            ]
+        },
+        "release": {
+            "codeSignIdentity": "iPhone Distribution",
+            "provisioningProfile": "3a4c4355-c1e8-4e56-81b4-ac939a4d730a",
+            "developmentTeam": "T97MFGML35",
+            "packageType": "app-store",
+            "buildFlag": [
+                "-UseModernBuildSystem=0"
+            ]
+        }
+    }
+}
