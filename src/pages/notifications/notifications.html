@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar color="themeBlue">
+    <ion-title>Notificaciones</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="background-primary">
+  <ion-list
+    text-wrap
+    *ngFor="let notification of notifications"
+    (click)="
+      openNotification(
+        notification.title,
+        notification.body,
+        notification.bigPicture,
+        notification.subtitle,
+        notification._id
+      )
+    "
+  >
+    <div class="notification" ion-item ion-item>
+      <div class="notification status">
+        <span>&nbsp;</span>
+        <span
+          ><img
+            src="assets/imgs/notification.png"
+            *ngIf="notification.show == 'true'"
+        /></span>
+        <span>&nbsp;</span>
+      </div>
+      <div class="notification image">
+        <img id="image" [src]="notification.bigPicture" />
+      </div>
+
+      <div class="notification content">
+        <h2 id="title" class="title">{{ notification.title }}</h2>
+        <h2 id="subtitle" class="subtitle">{{ notification.subtitle }}</h2>
+      </div>
+    </div>
+  </ion-list>
+</ion-content>

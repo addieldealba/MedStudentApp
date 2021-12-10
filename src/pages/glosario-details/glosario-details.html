@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar color="themeBlue">
+    <ion-title>{{ review.title }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="background-primary" padding>
+  <ion-card
+    class="list-element"
+    *ngFor="let chapter of review.chapters"
+    (click)="
+      cardClicked(review.title,chapter.chapter, chapter.name, chapter.video, chapter.pdf)
+    "
+  >
+    <ion-card-header *ngIf="chapter.name"> {{ chapter.name }} </ion-card-header>
+  </ion-card>
+</ion-content>

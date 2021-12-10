@@ -1,0 +1,59 @@
+page-login {
+  form {
+    width: 75%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  ion-content {
+    // background-image: url('../assets/imgs/bg_login.jpg');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: center;
+  }
+  img {
+    padding-right: 65px;
+    padding-left: 65px;
+    padding-bottom: 50px;
+  }
+  ion-content > div {
+    display: block;
+    background-color: map-get($colors, themeOrange);
+  }
+  .input-container {
+    margin-bottom: 70px;
+  }
+  .input {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+  }
+  .button {
+    display: block;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    border: 2px solid white;
+    color: white;
+    width: 100%;
+    height: 40px;
+    font-size: 1.6rem;
+  }
+  ion-item.item-input {
+    padding-left: 0;
+  }
+  ion-input {
+    color: white;
+  }
+  .text-input::-moz-placeholder {
+    color: white;
+  }
+
+  .text-input:-ms-input-placeholder {
+    color: white;
+  }
+
+  .text-input::-webkit-input-placeholder {
+    text-indent: 0;
+    color: white;
+  }
+}

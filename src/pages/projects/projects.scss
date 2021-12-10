@@ -1,0 +1,100 @@
+page-projects {
+      .txt-light{
+        // color: map-get($colors, light);
+      }
+      .majorFilter{
+        background-color: map-get($colors, light);
+        margin-bottom: 20px;
+        border-radius: 4px;
+      }
+      .vote_card{
+        border-radius: 4px;
+        color: map-get($colors, light);
+      }
+      .votes{
+        margin-top: 20px;
+      }
+      .actions{
+        height: 30px;
+        margin-top: 15px;
+        overflow: hidden;
+      }
+      .actions > *{
+        display: inline-block;
+        margin: 0 auto;
+      }
+      .actions > .line{
+        border: 1px solid rgba(98,33,41,1);
+        height: 100%;
+      }
+      .button-vote{
+        float: left;
+        width: 48%;
+        padding: 5px;
+        text-align: center;
+      }
+      .button-details{
+        padding: 5px;
+        float: right;
+        text-align: center;
+        width: 48%;
+      }
+      .disabled{
+        opacity: 0.5;
+        pointer-events: none;
+      }
+
+     .replaced{
+    	visibility: hidden;
+    	position: relative;
+    }
+    .replaced:after {
+    	visibility: visible;
+    	content: "Votado";
+        align-content: center;
+    }
+    .like{
+        visibility: visible;
+        position: relative;
+    }
+    #divMessage{
+        height: 20px;
+        margin-bottom: 10px;
+    }
+    #message{
+        text-align: center;
+        font-weight: bold;
+        margin-top: 0px;
+        font-size: 80%;
+    }
+
+    ion-card{
+        position: relative;
+        text-align: center;
+    }
+
+    .card-title{
+        position: absolute;
+        top: 8%;
+        font-size: 2.0em;
+        width: 100%;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .card-subtitle{
+        font-size: 1.0em;
+        position: absolute;
+        top: 52%;
+        width: 100%;
+        color: #fff;
+    }
+
+    .tit{
+        font-size: 1.6em;
+        position: relative;
+        text-align: center;
+        width: 100%;
+        color: #fff;
+    }
+}

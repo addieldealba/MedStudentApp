@@ -1,0 +1,55 @@
+MED Student App - IOS Fixes - 5/12/19 - Mitesh Goplani
+-changed ionic version to 5.0.0
+
+-pods update
+ -sudo gem install cocoapods
+ -pod repo update
+
+-removed onesignal plugin
+
+-removed and added google-maps-plugin
+
+-npm install ts
+
+##Do this everytime you remove and add ios platform
+- cd platforms/ios/cordova && npm install ios-sim@latest
+
+-remove facebook plugin
+
+--Removed plugins (to check for crash)
+cordova-admob-sdk 0.24.1 "AdMob SDK"
+cordova-plugin-admob-free 0.27.0 "Cordova AdMob Plugin"
+
+
+Steps after clone
+- npm install
+- ionic cordova run ios
+- cordova plugin rm onesignal-cordova-plugin
+- cordova plugin rm cordova-plugin-facebook4
+- npm install ts
+- cordova platform rm ios
+- cordova platform add ios@latest
+- cd platforms/ios/cordova && npm install ios-sim@latest
+- cordova plugin rm cordova-plugin-admob-free
+- cordova plugin add cordova-plugin-admob-free@latest
+- add this to your config.xml file
+
+ <platform name="ios">
+        <config-file parent="GADIsAdManagerApp" platform="ios" target="*-Info.plist">
+            <true />
+        </config-file> 
+ </platform>
+- ionic cordova run ios --target "iPhone-8"
+
+--- Older InAppBrowser and webview versions ---
+cordova-plugin-inappbrowser 2.0.2 "InAppBrowser"
+cordova-plugin-ionic-webview 1.2.1 "cordova-plugin-ionic-webview"
+
+--- fix inappbrowser ---
+cordova plugin rm cordova-plugin-inappbrowser
+cordova plugin add https://github.com/apache/cordova-plugin-inappbrowser.git
+
+
+help:
+ionic cordova run ios --target "iPhone-8"
+ionic cordova run ios --list

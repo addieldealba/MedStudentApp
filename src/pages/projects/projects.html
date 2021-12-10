@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar color="themeBlue">
+    <ion-title>Vota por proyectos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="background-primary" padding>
+  <div *ngFor="let project of projects">
+    <ion-card class="vote_card">
+      <!--
+        <img [src]="project.picture" alt="">
+          <div class="card-title">{{project.title}}</div>
+          <div class="card-subtitle votes">Votos: {{project.likes}}</div>
+          <div class="actions">
+            <div class="button-vote" icon-start (click)="vote(project._id);" [ngClass]="{'disabled replaced replaced .replaced:after' : (project.show == 'false')}">
+              <ion-icon name="thumbs-up" [ngClass]="{' like' : (project.show == 'true' || project.show == 'false')}"></ion-icon>
+              Votar
+            </div>
+            <span class="line"></span>
+            <div class="button-details" (click)="openDetails(project._id);" [ngClass]="{' like' : (project.show == 'true' || project.show == 'false')}" icon-start>
+              <ion-icon name="md-checkbox"></ion-icon>
+              Detalles
+            </div>
+        </div>
+      -->
+      <div class="tit">{{ project.title }}</div>
+      <div class="votes">Votos: {{ project.likes }}</div>
+      <div class="actions">
+        <div
+          class="button-vote"
+          icon-start
+          (click)="vote(project._id)"
+          [ngClass]="{
+            'disabled replaced replaced .replaced:after':
+              project.show == 'false'
+          }"
+        >
+          <ion-icon
+            name="thumbs-up"
+            [ngClass]="{
+              ' like': project.show == 'true' || project.show == 'false'
+            }"
+          ></ion-icon>
+          Votar
+        </div>
+        <span class="line"></span>
+        <div
+          class="button-details"
+          [ngClass]="{
+            ' like': project.show == 'true' || project.show == 'false'
+          }"
+          icon-start
+        >
+          <ion-icon name="md-checkbox"></ion-icon>
+          Detalles
+        </div>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>

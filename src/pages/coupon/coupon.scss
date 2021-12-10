@@ -1,0 +1,138 @@
+page-coupon {
+    ul,ol{
+      padding-left: 1rem;
+    }
+    .padding{
+      padding: 0 25px 0 25px;
+    }
+    .list-title{
+      color: rgba(239, 21, 21, 1);
+      font-weight: bold;
+    }
+    .notification_card{
+        background-color: map-get($colors, light);
+    }
+    .list-content{
+        color: rgba(39, 5, 10, 0.71);
+        font-weight: bold;
+    }
+
+    .notification{
+        display: inline-block;
+        vertical-align: middle;
+        padding-left: 0px;
+    }
+    .status
+    {
+
+    }
+    .content{
+
+    }
+    .image{
+        width: 40%;
+        //height: 100%;
+    }
+    span
+    {
+        display: block;
+    }
+    li
+    {
+          list-style: none;
+    }
+    .content
+    {
+        padding-left: 5px;
+        font-size: 1.3rem;
+    }
+
+    .item-md h2
+    {
+       margin: 2px 0;
+      font-size: 1.3rem;
+      font-weight: normal;
+    }
+
+    .item-sm h2
+    {
+       margin: 2px 0;
+      font-size: 1.3rem;
+      font-weight: normal;
+    }
+
+    .item-lg h2
+    {
+       margin: 2px 0;
+      font-size: 1.3rem;
+      font-weight: normal;
+    }
+
+    .list{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .list-md h2{
+       margin: 2px 0;
+       font-size: 1.2rem;
+       font-weight: normal;
+    }
+
+    .list-sm h2{
+       margin: 2px 0;
+       font-size: 1.2rem;
+       font-weight: normal;
+    }
+
+    .list-lg h2{
+       margin: 2px 0;
+       font-size: 1.2rem;
+       font-weight: normal;
+    }
+
+    #image{
+      width: 100%;
+      //height: 100%;
+    }
+
+    #stat{
+       visibility: hidden;
+    }
+
+    .unread{
+        visibility: visible;
+    }
+
+    .read{
+        visibility: hidden;
+    }
+    .title{
+        margin: 2px 0;
+       font-size: 1.5rem;
+       font-weight: bold;
+    }
+
+    .subtitle{
+        margin: 2px 0;
+       font-size: 1.3rem;
+       font-weight: normal;
+    }
+
+    .list-title{
+      color: rgba(239, 21, 21, 1);
+      font-weight: bold;
+    }
+
+    .label-md #title{
+        margin: 2px 0;
+        font-size: 1.6rem;
+        font-weight: bold;
+    }
+
+    .label-md #subtitle{
+        margin: 2px 0;
+        font-size: 1.4rem;
+        font-weight: normal;
+    }
+}

@@ -1,0 +1,119 @@
+﻿MEDSTUDENT APP Manual
+
+1. Download App code
+To download the application code 2 things will be necessary, the first one to download and install Git (here is the link: https://git-scm.com/downloads), and the second will be to access the repository which is hosted in Gitlab (Ask access to Addiel, he has master permission)
+
+2. Git
+Solo download and install following the instructions of the installer, here we will use Git Bash (not confuse with Git GUI)
+
+3. Access to the repository
+To access to the repository will be necessary to have a Gitlab account (if you do not have a favor to create it), once your account is created, the following will be to make it reach Addiel so that it integrates them into the repository, once the 2 previous steps have been done the following will create an SSH key to download the project code
+
+4. Create a SSH key (Optional)
+*You can just do a git clone instead of the following if you have already got repo access*
+To create the lead, we will use the following command in the Git Bash terminal:
+ssh-keygen -t rsa -C "your.email@example.com" -b 40 96
+Then we will proceed to visualize it, for this we will use the following command:
+cat ~ / .ssh / id_rsa.pub
+The above will have to be registered in GitLab in the SSH key section
+
+5. Commands to download the Ionic project 
+To download the project we will use the following command :
+git clone git@gitlab.com: PJVD / LeonesxlaSalud.git
+
+6. Download API code
+The api of the application is hosted in Heroku for it will be necessary to download Heroku CLI (It is available in this link https: //devcenter.heroku. com / articles / heroku-cli ), in addition to having the necessary credentials (email and password) the email used in Heroku is the following addielu@gmail.com the password will be given by addiel.
+Instructions to download and deploy
+To download the code and deploy Heroku, we are only going to follow the steps that Heroku himself provides us on the platform.
+Login on the platform
+Click on the name of the application
+Click on Deploy
+Follow the instructions given there	
+
+7. MongoDB
+The database is hosted on Mlab ( https://mlab.com/ ) to access it will be necessary to have with the user and the associated password (the associated user is addiel, as for the password please ask Addiel)
+
+8. Compile the Ionic App code project 
+To compile the application it will be necessary to install the following:
+Nodejs and npm (version 8.11 was used for the project) https://nodejs.org/es/ )
+Ionic (npm install -g ionic https://ionicframework.com/getting-started#cli )
+Cordova (npm install -g cordova https://ionicframework.com/getting-started #cli )
+Java JDK (http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html )
+For ubuntu you need Oracle JDK and not Open JDK. Install from here: https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-18-04
+Android Studio (https://developer.android.com/studio/ )
+
+One once installed everything described above the following download the dependencies, for this we are located inside the folder d the project (using a system or terminal symbol) and execute the following command:
+npm install in the root of the project, this will download the dependencies associated with the project.
+Once downloaded the dependencies of the project the following will generate the apk (this generated apk will be unsigned and can not be uploaded to the play store), to generate the apk we will execute the following command:
+
+Android Build Release:
+ionic cordova build --release android
+
+iOS Simulator Testing and for Screenshots for App Store:
+Make sure emulator is not running and type:
+ionic cordova run ios --list (To List Available Targets)
+ionic cordova run ios --target "iPhone-7, 12.1"
+ionic cordova run ios --target "iPad-Pro--12-9-inch---2nd-generation-, 12.1"
+
+iOS Build Release:
+Make sure you have XCode 10 setup on your Mac
+ionic cordova build ios --device --release --buildConfig
+
+For building on iOS if you are using MacOS Mojave you need to copy the entire source code folder to a usb drive that is ext4 formatted and build the app from this folder on usb drive, otherwise Apple servers will return error.
+These steps will generate either an unsigned Apk in the build folder or an ipa if ios build. Unsigned apk then needs to be signed using following section and ipa needs to be uploaded using Application Loader software on Mac.
+
+Sign apk (Only for Android)
+To sign the apk before compiled we will use some tools provided by the Java JDK and the Android SDK, in addition to using a key that was previously generated (https://drive.google.com/open?id=12Ksasm_1NTCYM9_78v6CtYqpy6VAv0Dj ) , besides having the alias and the pass of the file 
+(alias: alias_name, pass: leonesandroid https://drive.google.com/open?id=1WLpgEBfoYU7Ut--TwB6lfAt0j7ArDa51 ).
+Once you have everything ready the following will be to follow the official documentation (https://ionicframework.com/docs/v1/guide/publishing.html ), 
+
+And then only for Android App signing use:
+
+In project.properties under platforms\android change to:
+cordova.system.library.1=com.google.android.gms:play-services-base:15.0.1
+cordova.system.library.2=com.google.android.gms:play-services-ads:15.0.1
+
+1. cd /home/karan/Desktop/repos/health-savvy-stable/platforms/android/app/build/outputs/apk/release
+   jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore app-release-unsigned.apk alias_name
+
+   Windows:
+   cd C:\Users\karan\Desktop\repos\health-savvy-stable\platforms\android\app\build\outputs\apk\release
+   C:\PROGRA~1\Java\jdk1.8.0_241\bin\jarsigner.exe -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore app-release-unsigned.apk alias_name
+
+2. /home/karan/Android/Sdk/build-tools/27.0.3/zipalign -v 4 app-release-unsigned.apk release.apk
+   Replace /home/karan with the appropriate path of your Android SDK
+
+   Windows:
+   C:\Users\karan\AppData\Local\Android\Sdk\build-tools\29.0.3\zipalign -v 4 app-release-unsigned.apk release.apk
+
+Do the following only if you need to generate a new signing key.
+keytool -genkey -v -keystore my-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000), since these have already been done before.
+
+Note:
+iOS = com.healthsavvyapp.gdl
+Android = io.ionic.LeonesxlaSalud
+	
+Notifications
+In order to send a notification to users it will be necessary to have the program called Postman (https://www.getpostman.com/ ), once installed, the following instructions should be followed:
+
+This is the method by which the request will travel , since it is an insert to the database, the POST method will be used.
+This field corresponds to the URL of the API server, in this case it is pointing to the method that is responsible for the insertion of the new notification.
+In this section we will place the variables and their values ​​that will be sent to the API server to be processed.
+It is the method or format by which the variables will be encrypted.
+Name of the variables and their respective values ​​(in the notifications please use this same format).
+The request is sent to the API server (variables and their values ​​are sent).
+In this part, the information returned by the server is displayed when the request is made.
+
+Coupons
+This part follows exactly the same process as notifications, the only thing that changes is the URL it points to, this URL is: https://leonesxlasalud.herokuapp.com/api/newCoupon 
+
+{
+    "_id" : ObjectId("5b423f35e7179a31f530de8e"),
+    "title" : "Cupon 1",
+    "subtitle" : "Cupon 1 subtitulo",
+    "body" : "Cupon 1 contenido",
+    "bigPicture" : "https://image.ibb.co/gShodc/stains.png"
+}
+	
+Projects
+Also with Postman you can add new projects, for this we will use the following format and the following URL: https://leonesxlasalud.herokuapp.com/api/newProject

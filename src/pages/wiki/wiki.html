@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar color="themeBlue">
+    <ion-title>Wiki medicina</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="background-primary" padding>
+  <div *ngFor="let wiki of wikis">
+    <ion-card (click)="openDetails(wiki._id)" class="list-element">
+      <ion-card-header> {{ wiki.wiki.title }} </ion-card-header>
+      <ion-card-content> {{ wiki.wiki.content }} </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

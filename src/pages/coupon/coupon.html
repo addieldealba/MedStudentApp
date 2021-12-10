@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar color="themeBlue">
+    <ion-title>Enfermedades</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="background-primary">
+   <ion-list text-wrap *ngFor="let coupon of coupons" >
+       <div class="" ion-item ion-item  (click)= "openCoupon(coupon.title, coupon.body,coupon.bigPicture);">
+           <div class="notification image">
+               <img id="image" [src]="coupon.bigPicture">
+           </div>
+
+           <div class="notification content">
+               <h2 id="title" class="title">{{coupon.title}}</h2>
+               <h2 id="subtitle" class="subtitle">{{coupon.subtitle}}</h2>
+           </div>
+       </div>
+  </ion-list>
+</ion-content>

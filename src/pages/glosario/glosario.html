@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="themeBlue"> <ion-title>Glosario</ion-title> </ion-navbar>
+</ion-header>
+
+<ion-content class="background-primary" padding>
+  <div *ngFor="let review of reviews">
+    <ion-card
+      (click)="openDetails(review._id)"
+      class="list-element"
+      *ngIf="
+        !selectedValue ||
+        (selectedValue && selectedValue == review.university.subject)
+      "
+    >
+      <ion-card-header text-wrap> {{ review.title }} </ion-card-header>
+      <ion-card-content *ngIf="review.course">
+        {{ review.course }}
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

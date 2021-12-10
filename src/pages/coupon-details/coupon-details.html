@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar color="themeBlue">
+    <ion-title>Detalles</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="background-primary">
+    <ion-card>
+       <img [src]="coupon.bigPicture"/>
+       <ion-card-content>
+         <ion-card-title text-wrap>
+           {{coupon.title}}
+         </ion-card-title>
+         <p class=" item item-text-wrap" text-wrap  style="white-space: pre-line;">
+             {{coupon.body}}
+         </p>
+       </ion-card-content>
+   </ion-card>
+</ion-content>

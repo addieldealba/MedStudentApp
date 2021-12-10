@@ -1,0 +1,29 @@
+page-contact {
+  form{
+    width: 75%;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -0%);
+  }
+  ion-label{
+    display: block;
+    width: 100%;
+    color: white;
+  }
+  ion-input, ion-textarea{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: rgba(255,255,255,0.5);
+  }
+  ion-textarea{
+    padding: 5px;
+  }
+  .alert-message {
+    white-space: pre-line;
+  }
+  .button-submit{
+    float: right;
+  }
+}

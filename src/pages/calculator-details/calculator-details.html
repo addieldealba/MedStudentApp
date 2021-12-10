@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-navbar color="themeBlue">
+    <ion-title>Calculadora médica</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="background-primary" padding>
+  <ion-card class="option">
+    <ion-card-header text-wrap class="title">
+      {{ formula.title }}
+    </ion-card-header>
+    <ion-card-content *ngIf="formula.when">
+      <span class="bold">¿Cuándo usarla?</span>
+      <div>{{ formula.when }}</div>
+    </ion-card-content>
+  </ion-card>
+
+  <div *ngFor="let question of formula.questions; let idx = index">
+    <ion-card class="option">
+      <ion-list
+        radio-group
+        *ngIf="question.type == 'radio'"
+        [(ngModel)]="models[idx]"
+      >
+        <ion-list-header text-wrap> {{ question.name }} </ion-list-header>
+        <ion-card-content *ngIf="question.description">
+          <ul class="card-content">
+            <li>{{ question.description }}</li>
+          </ul>
+        </ion-card-content>
+        <ion-item *ngFor="let option of question.options; let j = index">
+          <ion-label text-wrap>{{ option.name }}</ion-label>
+          <ion-radio value="{{ j }}"></ion-radio>
+        </ion-item>
+      </ion-list>
+
+      
+
+      <ion-item *ngIf="question.type == 'select'">
+        <ion-label text-wrap>{{ question.name }}</ion-label>
+        <ion-select [(ngModel)]="models[idx]">
+          <ion-option
+            *ngFor="let option of question.options; let j = index"
+            value="{{ j }}"
+            >{{ option.name }}</ion-option
+          >
+        </ion-select>
+      </ion-item>
+
+      <ion-item *ngIf="question.type == 'input'">
+        <ion-label text-wrap stacked
+          >{{ question.name }} ({{ question.input.placeholder }})</ion-label
+        >
+        <ion-input
+          class="input"
+          [(ngModel)]="models[idx]"
+          *ngIf="question.input.validation"
+          placeholder="Norm: {{ question.input.validation.minLenght }} - {{ question.input.validation.maxLenght }}"
+        ></ion-input>
+        <ion-input
+          class="input"
+          [(ngModel)]="models[idx]"
+          *ngIf="!question.input.validation"
+          placeholder=""
+        ></ion-input>
+      </ion-item>
+    </ion-card>
+  </div>
+  <button
+    class="submit-button"
+    ion-button
+    (click)="calculate(formula.results.method)"
+    default
+  >
+    Calcular
+  </button>
+</ion-content>

@@ -1,0 +1,102 @@
+page-menu {
+  $xs-img-size:        75px;
+  $sm-img-size:        110px;
+  $md-img-size:        $sm-img-size;
+  $lg-img-size:        $sm-img-size;
+  $xl-img-size:        $sm-img-size;
+  .container{
+    position: relative;
+  }
+  .floating-button{
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+  }
+  .floating-button > *{
+    padding: 0 17px 17px 17px;
+  }
+  .main-logo{
+    padding: 30px 0 30px 0;
+  }
+  .elements > *{
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .elements > * > div{
+    border: 0.5px solid map-get($colors, light);
+    border-radius: 50%;
+    width: $xs-img-size;
+    height: $xs-img-size;
+    margin: 0 auto;
+    margin-top: 7px;
+    overflow: hidden;
+  }
+  .icon {
+    $size-difference:   45px;
+    font-size: $xs-img-size - $size-difference;
+    margin-top: $size-difference / 2;
+    text-align: center;
+    display: block;
+    color: map-get($colors, light);
+  }
+  .element-text{
+    display: block;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 5%;
+    color: map-get($colors, light);
+  }
+  .icon-special{
+    font-family: "times new roman";
+  }
+  .fab-button{
+    background-color: rgba(0,0,0,0);
+    color: white;
+  }
+
+  .version{
+    color: white;
+  }
+
+  @media (min-width: 576px) {
+      .elements > * > div{
+        width: $sm-img-size;
+        height: $sm-img-size;
+      }
+      .elements > * > div > ion-img{
+        width: $sm-img-size;
+        height: $sm-img-size;
+      }
+  }
+  @media (min-width: 768px) {
+    .elements > * > div{
+      width: $md-img-size;
+      height: $md-img-size;
+    }
+    .elements > * > div > ion-img{
+      width: $md-img-size;
+      height: $md-img-size;
+    }
+  }
+  @media (min-width: 992px) {
+    .elements > * > div{
+      width: $lg-img-size;
+      height: $lg-img-size;
+    }
+    .elements > * > div > ion-img{
+      width: $lg-img-size;
+      height: $lg-img-size;
+    }
+  }
+  @media (min-width: 1200px) {
+    .elements > * > div{
+      width: $xl-img-size;
+      height: $xl-img-size;
+    }
+    .elements > * > div > ion-img{
+      width: $xl-img-size;
+      height: $xl-img-size;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar color="themeBlue"> <ion-title>Detalles</ion-title> </ion-navbar>
+</ion-header>
+
+<ion-content class="background-primary">
+  <ion-card>
+    <img [src]="notification.bigPicture" />
+    <ion-card-content>
+      <ion-card-title text-wrap> {{ notification.title }} </ion-card-title>
+      <p class=" item item-text-wrap" text-wrap style="white-space: pre-line;">
+        {{ notification.body }}
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

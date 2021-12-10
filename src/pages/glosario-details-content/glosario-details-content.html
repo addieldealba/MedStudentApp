@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-navbar color="themeBlue">
+        <ion-title>{{ resources.name }}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="background-primary">
+    <!--<iframe
+    class="video"
+    [src]="videoUrl"
+    width=""
+    height=""
+    frameborder="0"
+  ></iframe>-->
+    <ion-card>
+        <ion-card-content>
+            <h1>Contenido</h1>
+            <div class="content-pdf" (click)="openPdf(pdfUrlToOpen)">
+                <img class="pdf-img" src="assets/imgs/pdf.png" alt="" />
+                <p class="pdf">Click aquí para ver el PDF del contenido</p>
+                <!-- <p class="sub">Estamos renovando el material 2018 A. ¡Espéralo!</p> -->
+            </div>
+        
+          
+        </ion-card-content>
+
+    </ion-card>
+
+    <ion-card>
+        <ion-card-content>
+            <div>
+                <ion-item>
+                    <ion-label>Descargar y no usar datos</ion-label>
+                    <ion-toggle [(ngModel)]="OfflineToggle" checked={{AlreadyDownloaded}} (ionChange)="FileAvailableOffline($event,pdfUrl,resources.name)"></ion-toggle>
+                </ion-item>
+            </div>
+        </ion-card-content>
+    </ion-card>
+
+    
+
+</ion-content>

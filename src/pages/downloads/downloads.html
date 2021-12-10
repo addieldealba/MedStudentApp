@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-navbar color="themeBlue"> <ion-title>Descargas</ion-title> </ion-navbar>
+</ion-header>
+
+<ion-content class="background-primary" padding>
+  <div *ngFor="let file of offlineFiles">
+    <ion-card (click)="openPdf(file.nativeURL)" class="list-element" *ngIf="file.isDirectory === false && file.name.substr(-4) === '.pdf'">
+      <ion-card-header text-wrap> {{ file.name.replace(' - Manual en PDF','') }} </ion-card-header>
+      <ion-card-content *ngIf="file">
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="themeBlue">
+    <ion-title
+      class=" item item-text-wrap"
+      text-wrap
+      style="white-space: pre-line;"
+      >{{ project.title }}</ion-title
+    >
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="background-primary">
+  <ion-card>
+    <img [src]="project.picture" alt="" />
+    <ion-card-content class="txt-light">
+      <p class=" item item-text-wrap" text-wrap style="white-space: pre-line;">
+        {{ project.content }}
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

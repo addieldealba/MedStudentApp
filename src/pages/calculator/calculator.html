@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar color="themeBlue">
+    <ion-title>Calculadora médica</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="background-primary">
+  <ion-list class="">
+    <div
+      class=""
+      ion-item
+      ion-item
+      *ngFor="let formula of formulas"
+      (click)="openCalculator(formula)"
+    >
+      <h2 class="list-title animate-in-primary" text-wrap>
+        {{ formula.title }}
+      </h2>
+      <p class="list-content animate-in-secondary" text-wrap>
+        {{ formula.when }}
+      </p>
+    </div>
+  </ion-list>
+</ion-content>

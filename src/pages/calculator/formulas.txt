@@ -1,0 +1,44 @@
+[11:21, 4/12/2017] Addiel IBM: https://reference.medscape.com/calculator/body-mass-index-bmi *
+[11:24, 4/12/2017] Addiel IBM: https://reference.medscape.com/calculator/sodium-deficit-hyponatremia *
+[11:29, 4/12/2017] Addiel IBM: https://www.mdcalc.com/bishop-score-vaginal-delivery-induction-labor *
+[11:31, 4/12/2017] Addiel IBM: https://www.mdcalc.com/curb-65-score-pneumonia-severity *
+[11:31, 4/12/2017] Addiel IBM: https://reference.medscape.com/calculator/apgar-score *
+[11:32, 4/12/2017] Addiel IBM: https://reference.medscape.com/calculator/glasgow-coma-scale *
+[11:34, 4/12/2017] Addiel IBM: https://www.mdcalc.com/cage-questions-alcohol-use *
+[11:34, 4/12/2017] Addiel IBM: https://www.mdcalc.com/alvarado-score-acute-appendicitis*
+[11:36, 4/12/2017] Addiel IBM: https://www.mdcalc.com/winters-formula-metabolic-acidosis-compensation*
+[11:38, 4/12/2017] Addiel IBM: https://www.mdcalc.com/american-diabetes-association-ada-risk-calculator*
+                               https://www.mdcalc.com/mean-arterial-pressure-map *
+                               https://www.mdcalc.com/sodium-correction-hyperglycemia *
+                               https://www.mdcalc.com/qsofa-quick-sofa-score-sepsis *
+                               https://www.mdcalc.com/has-bled-score-major-bleeding-risk *
+                               https://www.mdcalc.com/chads2-score-atrial-fibrillation-stroke-risk *
+                               https://www.mdcalc.com/heart-score-major-cardiac-events *
+
+
+[11:35, 4/12/2017] Addiel IBM: https://www.mdcalc.com/calcium-correction-hypoalbuminemia
+*No doy con el resultado*
+[11:23, 4/12/2017] Addiel IBM: https://reference.medscape.com/calculator/creatinine-clearance-measured
+medscape no especifica muy bien la formula y esta no está en mdcald.com
+[11:24, 4/12/2017] Addiel IBM: https://reference.medscape.com/calculator/osmolality-estimator-serum
+medscape no especifica muy bien la formula y esta no está en mdcald.com
+[11:25, 4/12/2017] Addiel IBM: https://reference.medscape.com/calculator/bsa-dosing
+medscape no especifica muy bien la formula y esta no está en mdcald.com
+[11:26, 4/12/2017] Addiel IBM: https://reference.medscape.com/calculator/estimated-delivery-date-pregnancy
+medscape no especifica muy bien la formula y esta no está en mdcald.com
+[11:26, 4/12/2017] Addiel IBM: https://reference.medscape.com/calculator/estimated-delivery-date-patient
+medscape no especifica muy bien la formula y esta no está en mdcald.com
+[11:27, 4/12/2017] Addiel IBM: https://www.mdcalc.com/sequential-organ-failure-assessment-sofa-score
+No le entendí
+[11:29, 4/12/2017] Addiel IBM: https://www.mdcalc.com/sirs-sepsis-septic-shock-criteria
+No entiendo muy bien la fórmula
+[11:30, 4/12/2017] Addiel IBM: https://www.mdcalc.com/child-pugh-score-cirrhosis-mortality
+No está bien especificada la tala de scores
+[11:32, 4/12/2017] Addiel IBM: https://www.mdcalc.com/apache-ii-score
+Muy larga, para el final
+[11:33, 4/12/2017] Addiel IBM: https://reference.medscape.com/calculator/dvt-probability-wells-score
+Adaptar a checkbox
+[11:36, 4/12/2017] Addiel IBM: https://www.mdcalc.com/duke-criteria-infective-endocarditis
+Adaptar checkbox
+[11:38, 4/12/2017] Addiel IBM: https://www.mdcalc.com/framingham-coronary-heart-disease-risk-score
+Examinar bien la fórmula

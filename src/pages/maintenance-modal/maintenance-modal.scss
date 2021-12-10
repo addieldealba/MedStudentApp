@@ -1,0 +1,25 @@
+page-maintenance-modal {
+  h3{
+    font-weight: bold;
+  }
+  .center{
+    display: block;
+    padding: 30% 0 30% 0;
+    height: 100%;
+  }
+  .center > *{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+  .icon-close{
+    font-size: 30px;
+    margin-right: 10px;
+    color: white;
+  }
+  .maintenance-icon{
+    width: 30%;
+    margin-bottom: 50px;
+  }
+}

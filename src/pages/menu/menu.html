@@ -1,0 +1,103 @@
+<ion-content class="background-primary container">
+    
+  
+  <ion-grid>
+  
+    <div class="version">
+      <ion-textarea [(ngModel)]="version" name="version" text-right readonly></ion-textarea>
+      <!-- <ion-label text-right position="floating">{{version}}</ion-label> -->
+    </div>
+
+
+    <ion-row>
+      <!-- <ion-col col-6 offset-3 col-sm-4 offset-sm-4 col-md-4 offset-md-4 col-lg-4 offset-lg-4 class="main-logo"> -->
+      <!-- Increased the size of logo -->
+        <ion-col col-7 offset-3 col-sm-5 offset-sm-4 col-md-5 offset-md-4 col-lg-5 offset-lg-4 class="main-logo">
+        <img src="assets/imgs/logo.png" alt="">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+      <ion-row class="elements">
+          <ion-col col-4 col-sm-4 col-md-3 col-lg-3>
+              <div class="map" [navPush]="mapPage">
+                  <ion-icon name="map" class="icon" isActive="false">
+
+                  </ion-icon>
+              </div>
+              <span class="element-text">Mapa Uni</span>
+          </ion-col>
+
+          <ion-col col-4 col-sm-4 col-md-3 col-lg-3>
+            <div class="material" [navPush]="universityPage">
+              <ion-icon name="bookmarks" class="icon" isActive="false">
+
+              </ion-icon>
+            </div>
+            <span class="element-text">Repasos</span>
+        </ion-col>
+        
+          <ion-col col-4 col-sm-4 col-md-3 col-lg-3>
+              <!--<div class="coupons" (click)="openModal();">-->
+              <div class="coupons" [navPush]="couponPage">
+                <ion-icon name="barcode" class="icon" isActive="false">
+
+                </ion-icon>
+              </div>
+              <span class="element-text">Enfermedades</span>
+          </ion-col>
+
+          <!-- <ion-col col-4 col-sm-4 col-md-3 col-lg-3>
+              <div class="wiki" (click)="openModal();">
+              <div class="wiki" [navPush]="wikiPage">
+                 <ion-icon name="" class="icon icon-special" isActive="false">
+
+                </ion-icon>
+                <p class="icon icon-special">W</p>
+              </div>
+              <span class="element-text">Wiki Medicina</span>
+          </ion-col> -->
+
+          <ion-col col-4 col-sm-4 col-md-3 col-lg-3>
+              <div class="downloads" [navPush]="downloadsPage">
+                  <ion-icon name="cloud-done" class="icon" isActive="false">
+
+                  </ion-icon>
+              </div>
+              <span class="element-text">Descargas</span>
+          </ion-col>
+
+          <ion-col col-4 col-sm-4 col-md-3 col-lg-3>
+              <div class="glosario" [navPush]="glosarioPage">
+                  <ion-icon name="book" class="icon" isActive="false">
+
+                  </ion-icon>
+              </div>
+              <span class="element-text">Glosario</span>
+          </ion-col>
+          <ion-col col-4 col-sm-4 col-md-3 col-lg-3>
+              <div class="calculator" [navPush]="calculatorPage">
+                <ion-icon name="calculator" class="icon" isActive="false">
+
+                </ion-icon>
+              </div>
+              <span class="element-text">Calculadora Médica</span>
+          </ion-col>
+      </ion-row>
+
+  </ion-grid>
+
+  <!--<div class="floating-button" (click)="closeSessionAlert();">
+    <ion-icon name="log-out"></ion-icon>
+</div>-->
+  <!-- <ion-fab right bottom> -->
+    <!-- <button class="fab-button" (click)="" ion-fab color="primaryRed"><ion-icon name="log-out"></ion-icon></button> -->
+    <!-- <ion-fab-list side="left">
+      <button class="fab-button" ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+      <button class="fab-button" ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+      <button class="fab-button" ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+      <button class="fab-button" ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list> -->
+  <!-- </ion-fab> -->
+</ion-content>

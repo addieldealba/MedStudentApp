@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar color="themeBlue">
+    <ion-title>Formulario de contacto</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="background-primary">
+  <form (ngSubmit)="formOnSubmit()">
+      <ion-label stacked>Nombre</ion-label>
+      <ion-input [(ngModel)]="data.name" name="name"></ion-input>
+
+      <ion-label stacked>Correo electrónico</ion-label>
+      <ion-input [(ngModel)]="data.email" name="email"></ion-input>
+
+      <ion-label stacked>Mensaje</ion-label>
+      <ion-textarea [(ngModel)]="data.message" name="message"></ion-textarea>
+
+    <button class="button-submit" ion-button type="submit" color="black" default>Enviar</button>
+  </form>
+</ion-content>
